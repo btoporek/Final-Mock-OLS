@@ -13,8 +13,8 @@ function HomePage() {
       <div className="home">
         <div className="heading">
           <button className="icon-button">
-            <CgProfile className="heading-icons" /> //FIXME - need to add
-            profile modal
+            <CgProfile className="heading-icons" />
+            {/* //FIXME - need to add profile modal */}
           </button>
           <button className="icon-button">
             <a href="https://www.gmail.com" target="_blank">
