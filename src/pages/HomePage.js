@@ -13,10 +13,13 @@ function HomePage() {
       <div className="home">
         <div className="heading">
           <button className="icon-button">
-            <CgProfile className="heading-icons" />
+            <CgProfile className="heading-icons" /> //FIXME - need to add
+            profile modal
           </button>
           <button className="icon-button">
-            <MdOutlineMail className="heading-icons" />
+            <a href="https://www.gmail.com" target="_blank">
+              <MdOutlineMail className="heading-icons" />
+            </a>
           </button>
           <button
             onClick={() => setIsCalendarModalOpen(!isCalendarModalOpen)}
