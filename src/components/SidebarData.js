@@ -1,31 +1,41 @@
 import React from "react";
-import * as FaIcons from "react-icons/fa";
-import * as AiIcons from "react-icons/ai";
-import * as FcIcons from "react-icons/fc";
+import { FaRegListAlt } from "react-icons/fa";
+import {
+  AiOutlineHome,
+  AiTwotoneCalendar,
+  AiOutlineInfoCircle,
+} from "react-icons/ai";
+import { MdPeopleOutline } from "react-icons/md";
 
 export const SidebarData = [
   {
     title: "Home",
     path: "/",
-    icons: <AiIcons.AiOutlineHome />,
+    icon: <AiOutlineHome />,
     cName: "nav-text",
   },
   {
     title: "Schedule",
     path: "/schedule",
-    icons: <AiIcons.AiTwotoneCalendar />,
+    icon: <AiTwotoneCalendar />,
     cName: "nav-text",
   },
   {
     title: "Courses",
     path: "/courses",
-    icons: <FaIcons.FaRegListAlt />,
+    icon: <FaRegListAlt />,
+    cName: "nav-text",
+  },
+  {
+    title: "Classes",
+    path: "/classes",
+    icon: <MdPeopleOutline />,
     cName: "nav-text",
   },
   {
     title: "About",
     path: "/about",
-    icons: <FcIcons.FcAbout />,
+    icon: <AiOutlineInfoCircle />,
     cName: "nav-text",
   },
 ];

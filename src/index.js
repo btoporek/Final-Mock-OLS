@@ -2,15 +2,16 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./App.css";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import Home from "./routes/Home";
-import Courses from "./routes/Courses";
-import Schedule from "./routes/Schedule";
-import Navbar from "./components/Navbar";
-import About from "./routes/About";
+import HomePage from "./pages/HomePage";
+import CoursesPage from "./pages/CoursesPage";
+import SchedulePage from "./pages/SchedulePage";
+import Sidebar from "./components/Sidebar";
+import AboutPage from "./pages/AboutPage";
+import ClassesPage from "./pages/ClassesPage";
 
 const AppLayout = () => (
   <>
-    <Navbar />
+    <Sidebar />
     <Outlet />
   </>
 );
@@ -21,19 +22,23 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home />,
+        element: <HomePage />,
       },
       {
         path: "schedule",
-        element: <Schedule />,
+        element: <SchedulePage />,
       },
       {
         path: "courses",
-        element: <Courses />,
+        element: <CoursesPage />,
+      },
+      {
+        path: "classes",
+        element: <ClassesPage />,
       },
       {
         path: "about",
-        element: <About />,
+        element: <AboutPage />,
       },
     ],
   },

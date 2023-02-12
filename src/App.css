@@ -7,50 +7,95 @@
   font-family: "Lato", sans-serif;
 }
 
+.icons {
+  font-size: 25px;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  min-height: 0vh;
+  position: relative;
+  line-height: 200px;
+  vertical-align: middle;
+}
+
+.heading {
+  margin-right: 30px;
+  margin-top: 15px;
+  align-items: end;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+}
+
+.icon-button {
+  font-size: 35px;
+  margin-left: 10px;
+  float: right;
+  background: transparent;
+  border: transparent;
+  vertical-align: middle;
+}
+
+.heading-icons:hover {
+  color: rgb(49, 46, 65);
+}
+
+.modal-content {
+  float: right;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  padding-left: 1500px;
+}
+
+.modal-content.closed {
+  display: none;
+}
+
 .home,
 .schedule,
 .courses,
+.classes,
 .about {
   display: flex;
-  height: 90vh;
-  align-items: center;
+  color: black;
+  text-align: center;
   justify-content: center;
-  font-size: 3rem;
-  background-color: #fff;
-  color: #000;
+  border-bottom: 1px solid #bcb8b8;
+  height: 60px;
 }
 
-/* Navbar CSS */
-.navbar {
-  background-color: #000000;
-  height: 80px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+#page-body {
+  background-image: url(https://images.pexels.com/photos/1420701/pexels-photo-1420701.jpeg);
+  height: 1300px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  justify-content: right;
 }
 
-.menu-bars {
-  margin-left: 2rem;
-  font-size: 2rem;
-  background: none;
-  color: #fff;
-}
-
-.nav-menu {
-  background-color: #000000;
+/* Sidebar CSS */
+.sidebar {
+  background-color: #292d3e;
   width: 250px;
-  height: 100vh;
+  height: 120vh;
   display: flex;
   justify-content: center;
   position: fixed;
   top: 0;
-  left: -100%;
-  transition: 850ms;
+  left: 0;
 }
 
-.nav-menu.active {
-  left: 0;
-  transition: 450ms;
+#sidebar-heading {
+  color: #ffffff;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  bottom: 100%;
+  font-weight: 500;
 }
 
 .nav-text {
@@ -76,7 +121,7 @@
 
 .nav-text a:hover {
   background-color: #ffffff;
-  color: #fff;
+  color: #050505;
 }
 
 .nav-menu-items {
