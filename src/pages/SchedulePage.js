@@ -1,9 +1,10 @@
 import React from "react";
+import Schedule from "../components/Schedule";
 
 function SchedulePage() {
   return (
     <div className="schedule">
-      <h1>Schedule</h1>
+      <Schedule />
     </div>
   );
 }

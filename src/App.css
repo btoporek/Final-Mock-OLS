@@ -22,7 +22,6 @@
 
 .heading {
   margin-right: 30px;
-  margin-top: 15px;
   align-items: end;
   text-align: center;
   display: inline-block;
@@ -36,18 +35,40 @@
   background: transparent;
   border: transparent;
   vertical-align: middle;
-}
-
-a {
   text-decoration: none;
   color: black;
+}
+
+#mail-button {
+  font-size: 35px;
+  margin-left: 10px;
+  float: right;
+  background: transparent;
+  border: transparent;
+  vertical-align: middle;
+}
+
+#mail-button.a {
+  text-decoration: none;
+  color: black;
+  outline-color: #000000;
+}
+
+.heading-icons {
+  color: black;
+  float: right;
+  align-content: right;
 }
 
 .heading-icons:hover {
   color: rgb(49, 46, 65);
 }
 
-.modal-content {
+#calendar {
+  margin-left: 12%;
+}
+
+.calendar-modal {
   float: right;
   width: 100%;
   height: 100%;
@@ -56,51 +77,140 @@ a {
   padding-left: 1500px;
 }
 
-.modal-content.closed {
+.calendar-modal.closed {
   display: none;
 }
 
-.home,
-.schedule,
-.courses,
-.classes,
-.about {
-  display: flex;
-  color: black;
+div.modal-body {
+  vertical-align: middle;
   text-align: center;
-  justify-content: center;
-  border-bottom: 1px solid #bcb8b8;
-  height: 60px;
+  display: inline-block;
 }
 
-#page-body {
+.img-thumbnail {
+  margin-bottom: 15px;
+}
+
+#list-title {
+  width: 25%;
+  text-align: center;
+  height: 40px;
+  font-weight: 800;
+}
+
+#list-info {
+  width: 75%;
+  height: 40px;
+  text-align: left;
+}
+
+.edit-button {
+  margin-top: 5px;
+}
+
+#not-found {
+  text-align: center;
+  font-weight: 200;
+  margin-top: 200px;
+  font-size: 30px;
+}
+
+#schedule-div {
+  width: 700px;
+  height: 900px;
+  background-color: black;
+}
+
+div.tab-nav {
+  margin-bottom: 5px;
+}
+
+table {
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 20px;
+  font-size: xx-large;
+}
+
+.tab {
+  color: black;
+}
+
+div.container-fluid {
+  width: 1600px;
+  font-size: x-large;
+  margin-top: 5px;
+}
+
+.home {
   background-image: url(https://images.pexels.com/photos/1420701/pexels-photo-1420701.jpeg);
   height: 1300px;
   background-repeat: no-repeat;
   background-size: contain;
   width: 100%;
   justify-content: right;
+  text-align: center;
 }
 
-/* Sidebar CSS */
-.sidebar {
+.schedule {
+  background-image: url(https://images.pexels.com/photos/509922/pexels-photo-509922.jpeg);
+  height: 1300px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  justify-content: right;
+  text-align: center;
+}
+
+#home-heading {
+  padding-top: 400px;
+  font-size: 100px;
+  font-weight: 600;
+}
+
+.courses,
+.classes,
+.about,
+.not-found {
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  background-color: #fff;
+  color: #000;
+}
+
+/* Navbar CSS */
+.navbar {
+  display: inline-block;
+  color: black;
+  border-bottom: 1px solid #bcb8b8;
+  height: 60px;
+}
+
+.menu-bars {
+  margin-left: 2rem;
+  font-size: 2rem;
+  background: none;
+  color: #000;
+}
+
+.nav-menu {
   background-color: #292d3e;
   width: 250px;
-  height: 120vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   position: fixed;
   top: 0;
-  left: 0;
+  left: -100%;
+  transition: 850ms;
 }
 
-#sidebar-heading {
-  color: #ffffff;
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  bottom: 100%;
-  font-weight: 500;
+.nav-menu.active {
+  left: 0;
+  transition: 450ms;
 }
 
 .nav-text {
@@ -126,7 +236,7 @@ a {
 
 .nav-text a:hover {
   background-color: #ffffff;
-  color: #050505;
+  color: #000;
 }
 
 .nav-menu-items {
@@ -134,12 +244,29 @@ a {
 }
 
 .navbar-toggle {
-  background-color: #000000;
+  background-color: #292d3e;
   width: 100%;
-  height: 80px;
+  height: 20px;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: right;
+  padding-right: 10px;
+  float: inline-start;
+  left: 0;
+  color: white;
+}
+
+#close-nav-button {
+  color: white;
+}
+
+#sidebar-heading {
+  color: #ffffff;
+  text-align: left;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 20px;
+  bottom: 100%;
+  font-weight: 500;
 }
 
 span {
