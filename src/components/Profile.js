@@ -1,6 +1,6 @@
-import EditProfile from "./ProfileModal";
+import ProfileModal from "./ProfileModal";
 
 function Profile() {
-  return <EditProfile />;
+  return <ProfileModal />;
 }
 export default Profile;

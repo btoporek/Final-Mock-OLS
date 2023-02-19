@@ -168,7 +168,11 @@ div.container-fluid {
   font-weight: 600;
 }
 
-.courses,
+.courses {
+  background-color: whitesmoke;
+  display: flex;
+}
+
 .classes,
 .about,
 .not-found {

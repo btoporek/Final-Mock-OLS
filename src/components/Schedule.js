@@ -1,6 +1,6 @@
 import Tab from "react-bootstrap/Tab";
 import Nav from "react-bootstrap/Nav";
-import "./ScheduleStyle.css";
+import "./Schedule.css";
 import { MondaySchedule } from "./table-components/MondaySchedule";
 import { TuesdaySchedule } from "./table-components/TuesdaySchedule";
 import { WednesdaySchedule } from "./table-components/WednesdaySchedule";
@@ -9,7 +9,7 @@ import { FridaySchedule } from "./table-components/FridaySchedule";
 
 function Schedule() {
   return (
-    <div className="container-fluid">
+    <div className="container">
       <Tab.Container defaultActiveKey="monday">
         <Nav variant="tabs" className="tab-nav">
           <Nav.Item className="nav-item">

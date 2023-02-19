@@ -27,12 +27,6 @@ export const SidebarData = [
     cName: "nav-text",
   },
   {
-    title: "Classes",
-    path: "/classes",
-    icon: <MdPeopleOutline />,
-    cName: "nav-text",
-  },
-  {
     title: "About",
     path: "/about",
     icon: <AiOutlineInfoCircle />,

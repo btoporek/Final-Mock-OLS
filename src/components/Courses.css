@@ -1,0 +1,133 @@
+.header {
+  text-align: center;
+  font-weight: 800;
+  margin-top: 5px;
+}
+
+.center-button {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  position: absolute;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.add-course {
+  text-align: center;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: #292d3e;
+  color: white;
+  height: 30px;
+  font-size: 15px;
+  font-family: "Lato", sans-serif;
+  text-align: center;
+  vertical-align: middle;
+  padding: 5px;
+  width: 100px;
+  line-height: 1;
+}
+
+.container {
+  margin-top: 1rem;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-body {
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card {
+  flex: 1 0 500px;
+  box-sizing: border-box;
+  margin: 1rem 0.25em;
+  height: 100%;
+}
+
+.card-title {
+  text-transform: capitalize;
+  font-weight: 800;
+}
+
+#edit-header {
+  text-transform: capitalize;
+  font-weight: 800;
+}
+
+input::placeholder {
+  text-transform: capitalize;
+}
+
+.btn-add-course {
+  background-color: transparent;
+  border: transparent;
+  font-size: 30px;
+  line-height: 1;
+}
+
+.card-btn-users {
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  border-radius: 5px;
+  background-color: #384068;
+  color: white;
+  height: 30px;
+  font-size: 13px;
+  font-family: "Lato", sans-serif;
+  text-align: center;
+  padding: 5px;
+  line-height: 1;
+}
+
+.card-btn-users:hover {
+  background-color: white;
+  color: black;
+}
+
+.card-btn-remove {
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+  border-radius: 5px;
+  background-color: #292d3e;
+  color: white;
+  height: 30px;
+  font-size: 13px;
+  font-family: "Lato", sans-serif;
+  text-align: center;
+  padding: 5px;
+  line-height: 1;
+}
+
+.card-btn-remove:hover {
+  background-color: white;
+  color: black;
+}
+
+.card-btn-edit {
+  position: absolute;
+  bottom: 10px;
+  left: 125px;
+  border-radius: 5px;
+  background-color: #292d3e;
+  color: white;
+  height: 30px;
+  font-size: 13px;
+  font-family: "Lato", sans-serif;
+  text-align: center;
+  padding: 5px;
+  line-height: 1;
+}
+
+.card-btn-edit:hover {
+  background-color: white;
+  color: black;
+}

@@ -1,0 +1,80 @@
+.roster-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 16px;
+}
+
+.roster-image {
+  border: 1px solid white;
+  border-radius: 70px;
+  height: 60px;
+  margin-right: 5px;
+}
+
+li {
+  list-style-type: none;
+  text-align: left;
+}
+
+.list-items {
+  vertical-align: middle;
+}
+
+.drop-button {
+  text-align: right;
+  float: left;
+}
+
+.btn-group {
+  float: left;
+  margin-left: 60px;
+}
+
+#drop {
+  background-color: rgb(84, 90, 113);
+  color: white;
+  height: 30px;
+  width: 100px;
+  line-height: 1;
+  margin-right: 5px;
+  border: 1px;
+  border-radius: 5px;
+}
+
+#drop:hover {
+  background-color: rgb(108, 115, 146);
+  color: white;
+}
+
+#contact {
+  background-color: rgb(58, 78, 141);
+  color: white;
+  height: 30px;
+  width: 100px;
+  line-height: 1;
+  margin-right: 5px;
+  border-radius: 5px;
+  border: 1px;
+}
+
+#contact:hover {
+  background-color: rgb(85, 106, 172);
+  color: white;
+}
+
+button a {
+  text-decoration: none;
+  color: white;
+}
+
+button a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.close-modal {
+  background-color: transparent;
+  border: transparent;
+  font-size: 25px;
+}

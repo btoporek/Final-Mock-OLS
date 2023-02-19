@@ -2,14 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
-import "./components/CalendarStyle.css";
+import "./components/Calendar.css";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import CoursesPage from "./pages/CoursesPage";
 import SchedulePage from "./pages/SchedulePage";
-import Sidebar from "./components/Sidebar";
 import AboutPage from "./pages/AboutPage";
-import ClassesPage from "./pages/ClassesPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import Navbar from "./components/Navbar";
 
@@ -37,10 +35,6 @@ const router = createBrowserRouter([
         element: <CoursesPage />,
       },
       {
-        path: "classes",
-        element: <ClassesPage />,
-      },
-      {
         path: "about",
         element: <AboutPage />,
       },
@@ -53,8 +47,4 @@ const router = createBrowserRouter([
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
-);
+root.render(<RouterProvider router={router} />);
