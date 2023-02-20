@@ -3,6 +3,7 @@ import Modal from "react-bootstrap/Modal";
 import React, { useState } from "react";
 import { CgProfile } from "react-icons/cg";
 import Image from "react-bootstrap/Image";
+import "../styles/ProfileModal.css";
 
 function ProfileModal() {
   const [showProfile, setShowProfile] = useState(false);

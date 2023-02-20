@@ -5,7 +5,6 @@ import {
   AiTwotoneCalendar,
   AiOutlineInfoCircle,
 } from "react-icons/ai";
-import { MdPeopleOutline } from "react-icons/md";
 
 export const SidebarData = [
   {

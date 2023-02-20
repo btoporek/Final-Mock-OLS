@@ -1,47 +1,43 @@
-import Table from "react-bootstrap/esm/Table";
+import Service from "../../service/Service";
+import ServiceClient from "../../service/ServiceClient";
+import { useCallback, useEffect, useState, useMemo } from "react";
 
 export const ThursdaySchedule = () => {
+  const [courses, setCourses] = useState([]);
+  const courseService = useMemo(() => new Service(ServiceClient), []);
+
+  const fetchCourses = useCallback(async () => {
+    try {
+      const courses = await courseService.getCourses();
+      setCourses(courses);
+    } catch (error) {
+      console.log(error);
+    }
+  }, [courseService]);
+
+  useEffect(() => {
+    fetchCourses();
+  }, [fetchCourses]);
   return (
-    <Table bordered hover responsive className="table">
-      <thead>
-        <tr>
-          <th>Time</th>
-          <th>Class</th>
-          <th>Subject</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>9:00 - 9:45 AM</td>
-          <td>An eiusdem modi</td>
-          <td>Dolore Sunt Non</td>
-        </tr>
-        <tr>
-          <td>10:00 - 10:45 AM</td>
-          <td>Ipsum Quam Alias</td>
-          <td>Est Quae Nobis</td>
-        </tr>
-        <tr>
-          <td>11:00 - 11:45 AM</td>
-          <td>Quasi Sunt Nostrum</td>
-          <td>Ipsa Quae Tempora</td>
-        </tr>
-        <tr>
-          <td>12:00 - 1:00 PM</td>
-          <td>Lorem Ipsum</td>
-          <td> Dolor Sit Amet</td>
-        </tr>
-        <tr>
-          <td>1:00 - 1:45 PM</td>
-          <td>An eiusdem modi</td>
-          <td>Dolore Sunt Non</td>
-        </tr>
-        <tr>
-          <td>2:00 - 2:45 PM</td>
-          <td>Ipsum Quam Alias</td>
-          <td>Est Quae Nobis</td>
-        </tr>
-      </tbody>
-    </Table>
+    <>
+      <table className="table">
+        <thead>
+          <tr className="table-headers">
+            <th>Section</th>
+            <th>Class</th>
+            <th>Subject</th>
+          </tr>
+        </thead>
+        {courses.slice(5, 9).map((course, index) => (
+          <tbody key={course.id}>
+            <tr className="table-rows">
+              <td className="table-course-section">10{index + 6}</td>
+              <td className="table-course-name">{course.name}</td>
+              <td className="table-course-description">{course.description}</td>
+            </tr>
+          </tbody>
+        ))}
+      </table>
+    </>
   );
 };

@@ -1,9 +1,8 @@
-import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback, useMemo } from "react";
 import Service from "../service/Service";
 import ServiceClient from "../service/ServiceClient";
-import "./RosterModal.css";
+import "../styles/RosterModal.css";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import { ListGroup } from "react-bootstrap";
 
@@ -14,19 +13,20 @@ function RosterModal() {
   const handleCloseProfile = () => setShowProfile(false);
   const handleShowProfile = () => setShowProfile(true);
 
-  const courseService = new Service(ServiceClient);
-  const fetchRoster = async () => {
+  const courseService = useMemo(() => new Service(ServiceClient), []);
+
+  const fetchRoster = useCallback(async () => {
     try {
       const rosterList = await courseService.getRoster();
       setRoster(rosterList);
     } catch (error) {
       console.log(error);
     }
-  };
+  }, [courseService]);
 
   useEffect(() => {
     fetchRoster();
-  }, []);
+  }, [fetchRoster]);
 
   const handleDeleteStudent = async (e, id, firstname, lastname) => {
     console.log(`Deleted student ${firstname} ${lastname}`);
@@ -46,8 +46,8 @@ function RosterModal() {
 
   return (
     <>
-      <button className="icon-button" onClick={handleShowProfile}>
-        <button className="card-btn-users">Course Roster</button>
+      <button className="card-btn-users" onClick={handleShowProfile}>
+        Course Roster
       </button>
       <Modal
         show={showProfile}
@@ -67,7 +67,7 @@ function RosterModal() {
               <ul>
                 <div className="list-items">
                   <li className="roster-list">
-                    <img src={student.avatar} className="roster-image" />
+                    <img src={student.avatar} alt="" className="roster-image" />
                     Name: {student.firstname} {student.lastname} <br></br>
                     Contact:{" "}
                     {`${student.firstname}.${student.lastname}@email.com`}

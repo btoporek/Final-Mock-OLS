@@ -2,7 +2,8 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import React, { useState } from "react";
 import { GrChapterAdd } from "react-icons/gr";
-import { FormControl, FormGroup, FormLabel } from "react-bootstrap";
+import { FormControl, FormGroup, FormLabel, Form } from "react-bootstrap";
+import "../styles/Courses.css";
 
 function AddCourseModal({ addNewCourse }) {
   const [showCourse, setShowCourse] = useState(false);
@@ -19,6 +20,8 @@ function AddCourseModal({ addNewCourse }) {
 
   const handleAddCourse = (course) => {
     addNewCourse(course);
+    setCourseName("");
+    setCourseDescription("");
     handleCloseCourse();
   };
 
@@ -41,25 +44,27 @@ function AddCourseModal({ addNewCourse }) {
         <Modal.Header>Add New Course</Modal.Header>
         <Modal.Body>
           <FormGroup>
-            <FormLabel>Course Name:</FormLabel>
-            <FormControl
-              type="text"
-              placeholder="Name of course"
-              value={courseName}
-              onChange={(e) => {
-                setCourseName(e.target.value);
-              }}
-            />
-            <FormLabel>Course Description:</FormLabel>
-            <FormControl
-              as="textarea"
-              rows={3}
-              placeholder="Description of course"
-              value={courseDescription}
-              onChange={(e) => {
-                setCourseDescription(e.target.value);
-              }}
-            />
+            <Form>
+              <FormLabel>Course Name:</FormLabel>
+              <FormControl
+                type="text"
+                placeholder="Enter Name"
+                value={courseName}
+                onChange={(e) => {
+                  setCourseName(e.target.value);
+                }}
+              />
+              <FormLabel>Course Description:</FormLabel>
+              <FormControl
+                as="textarea"
+                rows={3}
+                placeholder="Enter Description"
+                value={courseDescription}
+                onChange={(e) => {
+                  setCourseDescription(e.target.value);
+                }}
+              />
+            </Form>
           </FormGroup>
         </Modal.Body>
         <Modal.Footer>

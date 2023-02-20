@@ -32,6 +32,8 @@ function EditCourseModal({ id, name, description, fetchCourses }) {
     } catch (error) {
       console.error(error);
     }
+    setCourseName("");
+    setCourseDescription("");
     handleCloseCourse();
   };
 

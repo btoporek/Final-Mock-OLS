@@ -1,6 +1,6 @@
 import Tab from "react-bootstrap/Tab";
 import Nav from "react-bootstrap/Nav";
-import "./Schedule.css";
+import "../styles/Schedule.css";
 import { MondaySchedule } from "./table-components/MondaySchedule";
 import { TuesdaySchedule } from "./table-components/TuesdaySchedule";
 import { WednesdaySchedule } from "./table-components/WednesdaySchedule";

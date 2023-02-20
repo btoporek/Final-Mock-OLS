@@ -1,0 +1,65 @@
+.about {
+  display: flexbox;
+  align-items: center;
+  text-align: center;
+}
+
+.about-image {
+  border-radius: 10px;
+}
+
+.job-title {
+  font-style: italic;
+}
+
+#linkedin {
+  font-size: 30px;
+  background: transparent;
+  border: transparent;
+  vertical-align: middle;
+  color: black;
+}
+
+#linkedin:hover {
+  text-decoration: none;
+  color: rgb(72, 71, 71);
+  outline-color: #000000;
+}
+
+#github {
+  font-size: 30px;
+  background: transparent;
+  border: transparent;
+  vertical-align: middle;
+  color: black;
+}
+
+#github:hover {
+  text-decoration: none;
+  color: rgb(72, 71, 71);
+  outline-color: #000000;
+}
+
+#email {
+  font-size: 30px;
+  background: transparent;
+  border: transparent;
+  vertical-align: middle;
+  color: black;
+}
+
+#email.a {
+  text-decoration: none;
+  color: black;
+  outline-color: #000000;
+}
+
+#email:hover {
+  text-decoration: none;
+  color: rgb(72, 71, 71);
+  outline-color: #000000;
+}
+
+.icons {
+  font-size: 30px;
+}

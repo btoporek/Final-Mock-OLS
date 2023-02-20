@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import "./Courses.css";
+import React, { useEffect, useState, useCallback, useMemo } from "react";
+import "../styles/Courses.css";
 import Service from "../service/Service";
 import ServiceClient from "../service/ServiceClient";
 import AddCourseModal from "./AddCourseModal";
@@ -9,20 +9,20 @@ import RosterModal from "./RosterModal";
 
 export default function Courses() {
   const [courses, setCourses] = useState([]);
-  const courseService = new Service(ServiceClient);
+  const courseService = useMemo(() => new Service(ServiceClient), []);
 
-  const fetchCourses = async () => {
+  const fetchCourses = useCallback(async () => {
     try {
       const courses = await courseService.getCourses();
       setCourses(courses);
     } catch (error) {
       console.log(error);
     }
-  };
+  }, [courseService]);
 
   useEffect(() => {
     fetchCourses();
-  }, []);
+  }, [fetchCourses]);
 
   const addNewCourse = async (course) => {
     console.log(
@@ -53,7 +53,7 @@ export default function Courses() {
   };
 
   return (
-    <div className="flex">
+    <div className="container">
       <h1 className="header">
         Active Courses <AddCourseModal addNewCourse={addNewCourse} />
       </h1>
@@ -62,10 +62,18 @@ export default function Courses() {
           {courses.map((course, index) => (
             <Col key={index} xs={12} md={6} lg={4}>
               <Card>
-                <Card.Img src="https://images.pexels.com/photos/1054218/pexels-photo-1054218.jpeg" />
+                <Card.Img
+                  className="course-image"
+                  alt=""
+                  src="https://images.pexels.com/photos/2440024/pexels-photo-2440024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                />
                 <Card.Body>
-                  <Card.Title>{course.name}</Card.Title>
-                  <Card.Subtitle>{course.description}</Card.Subtitle>
+                  <Card.Title>
+                    {course.name} <h5>Section 10{index + 1}</h5>
+                  </Card.Title>
+                  <Card.Subtitle>
+                    Description: {course.description}
+                  </Card.Subtitle>
                   <button
                     className="card-btn-remove"
                     onClick={(e) => {

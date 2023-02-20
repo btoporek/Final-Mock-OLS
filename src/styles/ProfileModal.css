@@ -1,0 +1,43 @@
+.icon-button {
+  font-size: 35px;
+  margin-left: 10px;
+  float: right;
+  background: transparent;
+  border: transparent;
+  vertical-align: middle;
+  text-decoration: none;
+  color: black;
+}
+
+.heading-icons {
+  color: black;
+  float: right;
+  align-content: right;
+}
+
+.heading-icons:hover {
+  color: rgb(49, 46, 65);
+}
+
+div.modal-body {
+  vertical-align: middle;
+  text-align: center;
+  display: inline-block;
+}
+
+.img-thumbnail {
+  margin-bottom: 15px;
+}
+
+#list-info {
+  width: 75%;
+  height: 40px;
+  text-align: left;
+}
+
+#list-title {
+  width: 25%;
+  text-align: center;
+  height: 40px;
+  font-weight: 800;
+}

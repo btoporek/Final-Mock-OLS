@@ -4,15 +4,6 @@
   margin-top: 5px;
 }
 
-.center-button {
-  margin-top: 15px;
-  margin-bottom: 10px;
-  position: absolute;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
 .add-course {
   text-align: center;
   margin-bottom: 10px;
@@ -33,8 +24,14 @@
   margin-top: 1rem;
 }
 
+.gy-4 {
+  position: relative;
+  z-index: 1;
+}
+
 .cards {
   display: flex;
+  position: absolute;
   flex-wrap: wrap;
 }
 
@@ -42,6 +39,11 @@
   white-space: normal;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin-bottom: 15px;
+}
+
+.card-img {
+  height: 320px;
 }
 
 .card {
@@ -49,6 +51,7 @@
   box-sizing: border-box;
   margin: 1rem 0.25em;
   height: 100%;
+  margin-bottom: 5px;
 }
 
 .card-title {
@@ -77,18 +80,20 @@ input::placeholder {
   bottom: 10px;
   right: 15px;
   border-radius: 5px;
+  border: transparent;
   background-color: #384068;
   color: white;
   height: 30px;
   font-size: 13px;
   font-family: "Lato", sans-serif;
   text-align: center;
-  padding: 5px;
-  line-height: 1;
+  padding: 10px;
+  line-height: 0.8;
 }
 
 .card-btn-users:hover {
   background-color: white;
+  border: 1px solid #384068;
   color: black;
 }
 
@@ -98,36 +103,40 @@ input::placeholder {
   left: 15px;
   border-radius: 5px;
   background-color: #292d3e;
+  border: transparent;
   color: white;
   height: 30px;
   font-size: 13px;
   font-family: "Lato", sans-serif;
   text-align: center;
-  padding: 5px;
-  line-height: 1;
+  padding: 10px;
+  line-height: 0.8;
 }
 
 .card-btn-remove:hover {
   background-color: white;
+  border: 1px solid #384068;
   color: black;
 }
 
 .card-btn-edit {
   position: absolute;
   bottom: 10px;
-  left: 125px;
+  left: 130px;
   border-radius: 5px;
+  border: transparent;
   background-color: #292d3e;
   color: white;
   height: 30px;
   font-size: 13px;
   font-family: "Lato", sans-serif;
   text-align: center;
-  padding: 5px;
-  line-height: 1;
+  padding: 10px;
+  line-height: 0.8;
 }
 
 .card-btn-edit:hover {
   background-color: white;
+  border: 1px solid #384068;
   color: black;
 }

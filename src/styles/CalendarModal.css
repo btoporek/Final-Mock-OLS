@@ -1,0 +1,16 @@
+.calendar-modal {
+  float: right;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  padding-left: 1500px;
+}
+
+.calendar-modal.closed {
+  display: none;
+}
+
+#calendar-modal-body {
+  margin-left: 11%;
+}

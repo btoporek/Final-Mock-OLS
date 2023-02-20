@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./App.css";
+import "./styles/Calendar.css";
 import "bootstrap/dist/css/bootstrap.css";
-import "./components/Calendar.css";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import CoursesPage from "./pages/CoursesPage";
