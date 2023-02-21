@@ -44,7 +44,7 @@ function EditCourseModal({ id, name, description, fetchCourses }) {
     handleCloseCourse();
   };
 
-  //function to save state of changed value for course name - checks if statement to enable save button
+  //function to save state of changed value for course description - checks if statement to enable save button
   const changeDescription = (value) => {
     setCourseDescription(value);
     setDescriptionChange(true);
@@ -78,28 +78,30 @@ function EditCourseModal({ id, name, description, fetchCourses }) {
       >
         <Modal.Header id="edit-header">Edit Course: {name}</Modal.Header>
         <Modal.Body>
-          <form>
-            <FormLabel>Course Name:</FormLabel>
-            <FormControl
-              type="text"
-              placeholder={name}
-              value={courseName}
-              onChange={(e) => {
-                changeName(e.target.value);
-              }}
-            />
-            <FormLabel>Course Description:</FormLabel>
-            <FormControl
-              as="textarea"
-              aria-required
-              rows={3}
-              placeholder={description}
-              value={courseDescription}
-              onChange={(e) => {
-                changeDescription(e.target.value);
-              }}
-            />
-          </form>
+          <FormGroup>
+            <Form>
+              <FormLabel>Course Name:</FormLabel>
+              <FormControl
+                type="text"
+                placeholder={name}
+                value={courseName}
+                onChange={(e) => {
+                  changeName(e.target.value);
+                }}
+              />
+              <FormLabel>Course Description:</FormLabel>
+              <FormControl
+                as="textarea"
+                aria-required
+                rows={3}
+                placeholder={description}
+                value={courseDescription}
+                onChange={(e) => {
+                  changeDescription(e.target.value);
+                }}
+              />
+            </Form>
+          </FormGroup>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleCloseCourse}>
