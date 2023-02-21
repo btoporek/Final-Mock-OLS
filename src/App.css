@@ -24,6 +24,10 @@ html {
   font-weight: 600;
 }
 
+.error-image {
+  height: 700px;
+}
+
 /* Home Page */
 .home {
   background-image: url(https://images.pexels.com/photos/1420701/pexels-photo-1420701.jpeg);
