@@ -15,6 +15,8 @@ function RosterModal() {
 
   const courseService = useMemo(() => new Service(ServiceClient), []);
 
+  //NOTE - useCallback and useMemo functions are necessary to have useEffect call fetchRoster function as opposed to re-writing get requests separate from service components
+
   const fetchRoster = useCallback(async () => {
     try {
       const rosterList = await courseService.getRoster();

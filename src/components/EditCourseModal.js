@@ -11,6 +11,7 @@ function EditCourseModal({ id, name, description, fetchCourses }) {
   const handleCloseCourse = () => setShowCourse(false);
   const handleShowCourse = () => setShowCourse(true);
 
+  // Function to edit courses in api and page
   const handleEditCourse = async (e, id) => {
     e.preventDefault();
     console.log(`Editing course id ${id}`);

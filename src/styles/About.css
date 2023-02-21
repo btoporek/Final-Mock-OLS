@@ -2,18 +2,35 @@
   display: flexbox;
   align-items: center;
   text-align: center;
+  background-color: whitesmoke;
+  background-size: contain;
+}
+
+.about-h1 {
+  font-size: 45px;
+}
+
+.about-h5 {
+  font-size: 25px;
+}
+
+.about-h4 {
+  font-style: italic;
+  font-size: 25px;
+}
+
+.about-p {
+  font-size: 25px;
 }
 
 .about-image {
   border-radius: 10px;
-}
-
-.job-title {
-  font-style: italic;
+  margin: 20px;
+  height: 350px;
 }
 
 #linkedin {
-  font-size: 30px;
+  font-size: 40px;
   background: transparent;
   border: transparent;
   vertical-align: middle;
@@ -27,7 +44,7 @@
 }
 
 #github {
-  font-size: 30px;
+  font-size: 40px;
   background: transparent;
   border: transparent;
   vertical-align: middle;
@@ -41,7 +58,7 @@
 }
 
 #email {
-  font-size: 30px;
+  font-size: 40px;
   background: transparent;
   border: transparent;
   vertical-align: middle;
@@ -60,6 +77,42 @@
   outline-color: #000000;
 }
 
+.contact-button {
+  background: transparent;
+  border: none;
+}
+
 .icons {
-  font-size: 30px;
+  height: 70px;
+  margin: 10px;
+}
+
+/* Media styling */
+@media only screen and (max-width: 450px) {
+  .icons {
+    height: 50px;
+    margin: 10px;
+  }
+
+  .about-h1 {
+    font-size: 40px;
+  }
+
+  .about-h5 {
+    font-size: 20px;
+  }
+
+  .about-h4 {
+    font-style: italic;
+  }
+
+  .about-p {
+    font-size: 20px;
+  }
+
+  .about-image {
+    border-radius: 10px;
+    margin: 20px;
+    height: 300px;
+  }
 }

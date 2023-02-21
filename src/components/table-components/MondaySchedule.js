@@ -4,7 +4,9 @@ import { useCallback, useEffect, useState, useMemo } from "react";
 
 export const MondaySchedule = () => {
   const [courses, setCourses] = useState([]);
-  const courseService = useMemo(() => new Service(ServiceClient), []);
+  const courseService = useMemo(() => new Service(ServiceClient), []); //calls information for api requests
+
+  //NOTE - useCallback and useMemo functions are necessary to have useEffect call fetchCourses function as opposed to re-writing get requests separate from service components
 
   const fetchCourses = useCallback(async () => {
     try {
@@ -18,6 +20,7 @@ export const MondaySchedule = () => {
   useEffect(() => {
     fetchCourses();
   }, [fetchCourses]);
+
   return (
     <>
       <table className="table">

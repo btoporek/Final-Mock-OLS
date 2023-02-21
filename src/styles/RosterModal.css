@@ -78,3 +78,14 @@ button a:hover {
   border: transparent;
   font-size: 25px;
 }
+
+/* Media styling */
+@media only screen and (max-width: 450px) {
+  .roster-list {
+    font-size: 13px;
+  }
+
+  .roster-image {
+    height: 50px;
+  }
+}

@@ -5,6 +5,7 @@ import { IconContext } from "react-icons";
 import { FaBars } from "react-icons/fa";
 import { AiOutlineCloseSquare } from "react-icons/ai";
 import { MdOutlineMail } from "react-icons/md";
+import { SiCircle } from "react-icons/si";
 import ProfileModal from "../components/ProfileModal";
 import CalendarModal from "../components/CalendarModal";
 
@@ -37,7 +38,8 @@ export default function Navbar() {
                 <AiOutlineCloseSquare id="close-nav-button" />
               </Link>
             </li>
-            <h2 id="sidebar-heading">Learning Platform</h2>
+            <SiCircle className="sidebar-logo" />
+            <h2 className="sidebar-heading">Learning Platform</h2>
             {SidebarData.map((item, index) => {
               return (
                 <li key={index} className={item.cName}>

@@ -9,6 +9,10 @@
   color: black;
 }
 
+#profile-button {
+  margin-right: 25px;
+}
+
 .heading-icons {
   color: black;
   float: right;
@@ -40,4 +44,11 @@ div.modal-body {
   text-align: center;
   height: 40px;
   font-weight: 800;
+}
+
+/* Media styling */
+@media only screen and (max-width: 400px) {
+  #list-info {
+    font-size: 14px;
+  }
 }

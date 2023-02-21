@@ -13,7 +13,11 @@ function ProfileModal() {
 
   return (
     <>
-      <button className="icon-button" onClick={handleShowProfile}>
+      <button
+        className="icon-button"
+        id="profile-button"
+        onClick={handleShowProfile}
+      >
         <CgProfile className="heading-icons" />
       </button>
       <Modal

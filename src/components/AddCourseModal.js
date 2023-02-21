@@ -13,6 +13,7 @@ function AddCourseModal({ addNewCourse }) {
   const handleCloseCourse = () => setShowCourse(false);
   const handleShowCourse = () => setShowCourse(true);
 
+  // course object to pass for POST
   const course = {
     name: courseName,
     description: courseDescription,

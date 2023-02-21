@@ -7,6 +7,16 @@
   font-family: "Lato", sans-serif;
 }
 
+/* Sets default background for larger size screens */
+html {
+  background-color: whitesmoke;
+}
+
+#root {
+  background-color: transparent;
+}
+
+/* Home */
 #not-found {
   text-align: center;
   padding-top: 200px;
@@ -14,11 +24,13 @@
   font-weight: 600;
 }
 
+/* Home Page */
 .home {
   background-image: url(https://images.pexels.com/photos/1420701/pexels-photo-1420701.jpeg);
-  height: 1300px;
+  height: 945px;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+  overflow: hidden;
   width: 100%;
   justify-content: right;
   text-align: center;
@@ -30,19 +42,24 @@
   font-weight: 600;
 }
 
+/* Schedule Page */
 .schedule {
   background-image: url(https://images.pexels.com/photos/509922/pexels-photo-509922.jpeg);
-  height: 1300px;
+  height: 1200px;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center top;
+  overflow: hidden;
   width: 100%;
   justify-content: right;
   text-align: center;
 }
 
+/* Courses Page */
 .courses {
   background-color: whitesmoke;
   display: flex;
+  height: max-content;
 }
 
 /* Not Found Page */
@@ -110,12 +127,12 @@
 .nav-text a {
   text-decoration: none;
   color: #ffffff;
-  font-size: 18px;
+  font-size: 20px;
   width: 95%;
   height: 100%;
   display: flex;
   align-items: center;
-  padding: 0 16px;
+  padding: 0 12px;
   border-radius: 4px;
 }
 
@@ -144,10 +161,18 @@
   color: white;
 }
 
-#sidebar-heading {
+.sidebar-logo {
+  color: #ffffff;
+  text-align: right;
+  margin-top: 30px;
+  margin-bottom: 5px;
+  margin-left: 50px;
+  font-size: 60px;
+}
+
+.sidebar-heading {
   color: #ffffff;
   text-align: left;
-  margin-top: 30px;
   margin-bottom: 30px;
   margin-left: 20px;
   bottom: 100%;
@@ -160,4 +185,27 @@ span {
 
 .sidebar {
   position: relative;
+}
+
+/* Media styling */
+@media only screen and (max-width: 600px) {
+  .sidebar-logo {
+    color: #ffffff;
+    text-align: right;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    margin-left: 40px;
+    font-size: 60px;
+  }
+
+  .sidebar-heading {
+    color: #ffffff;
+    margin-bottom: 30px;
+    text-align: left;
+    margin-right: 15px;
+  }
+
+  .nav-menu-items {
+    padding-left: 20px;
+  }
 }

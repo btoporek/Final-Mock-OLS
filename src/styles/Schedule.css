@@ -67,3 +67,24 @@ a.nav-link:hover {
   height: 900px;
   border: 2px solid black;
 }
+
+/* Media styling */
+@media only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Force table to not be like tables anymore */
+  table {
+    height: 20px;
+    width: 300px;
+    font-size: 15px;
+  }
+
+  .table-course-section {
+    width: 10px;
+    vertical-align: middle;
+  }
+
+  .col-1 {
+    width: 10%;
+    border: 2px solid black;
+  }
+}

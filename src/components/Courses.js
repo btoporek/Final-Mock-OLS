@@ -11,6 +11,8 @@ export default function Courses() {
   const [courses, setCourses] = useState([]);
   const courseService = useMemo(() => new Service(ServiceClient), []);
 
+  //NOTE - useCallback and useMemo functions are necessary to have useEffect call fetchCourses function as opposed to re-writing get requests separate from service components
+
   const fetchCourses = useCallback(async () => {
     try {
       const courses = await courseService.getCourses();
@@ -24,6 +26,7 @@ export default function Courses() {
     fetchCourses();
   }, [fetchCourses]);
 
+  // Function to add new course to api and page
   const addNewCourse = async (course) => {
     console.log(
       `Adding Course - Name: ${course.name} Description: ${course.description}`
@@ -36,6 +39,7 @@ export default function Courses() {
     }
   };
 
+  // Function to delete course from api and page
   const handleDeleteCourse = async (e, id) => {
     console.log(`Deleted course id ${id}`);
     const url = "https://63f112b35703e063fa524823.mockapi.io/courses";
@@ -69,7 +73,8 @@ export default function Courses() {
                 />
                 <Card.Body>
                   <Card.Title>
-                    {course.name} <h5>Section 10{index + 1}</h5>
+                    {course.name}{" "}
+                    <h5 className="section-header">Section 10{index + 1}</h5>
                   </Card.Title>
                   <Card.Subtitle>
                     Description: {course.description}
