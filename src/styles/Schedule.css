@@ -50,6 +50,14 @@ a.nav-link:hover {
 .table-course-description {
   text-transform: capitalize;
   text-align: left;
+  width: 800px;
+}
+
+.table-course-subject {
+  text-transform: capitalize;
+  text-align: center;
+  vertical-align: middle;
+  width: 150px;
 }
 
 .table-course-section {

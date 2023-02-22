@@ -29,6 +29,7 @@ export const WednesdaySchedule = () => {
             <th>Section</th>
             <th>Class</th>
             <th>Subject</th>
+            <th>Description</th>
           </tr>
         </thead>
         {courses.slice(0, 5).map((course, index) => (
@@ -36,6 +37,7 @@ export const WednesdaySchedule = () => {
             <tr className="table-rows">
               <td className="table-course-section">10{index + 1}</td>
               <td className="table-course-name">{course.name}</td>
+              <td className="table-course-subject">{course.subject}</td>
               <td className="table-course-description">{course.description}</td>
             </tr>
           </tbody>
